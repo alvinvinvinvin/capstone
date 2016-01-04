@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>MTT-INI-Parser</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.xtext.ui.shared.xtextBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>antlr4</name>
+			<type>2</type>
+			<location>D:/HanChen/WorkSpace/uwl-mse-mtt-ini-parser/MTT-INI-Parser/target/generated-sources/antlr4</location>
+		</link>
+		<link>
+			<name>model</name>
+			<type>2</type>
+			<location>D:/HanChen/WorkSpace/uwl-mse-mtt-ini-parser/MTT-INI-Parser/src/model</location>
+		</link>
+	</linkedResources>
+</projectDescription>

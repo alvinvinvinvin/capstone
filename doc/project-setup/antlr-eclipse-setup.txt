@@ -1,0 +1,119 @@
+Before importing a project make sure to install the ANTLR Eclipse Plugin
+---------------------------------------------------
+1) Install the antlr4ide (See Installation section)
+   https://github.com/jknack/antlr4ide
+
+
+Eclipse Setup to attach to the existing repository:
+ -> Starting from a local checkout
+---------------------------------------------------
+1) Checkout the repository on your local machine
+
+2) Open up Eclipse
+   File -> Import
+   General -> Existing Projects into Workspace
+   Find the repository and the MTT-INI-Parser directory
+   Open and Finish
+
+
+Eclipse Setup to attach to the existing repository:
+ -> Without a local checkout
+---------------------------------------------------
+1) Open up Eclipse
+   File -> Import
+   Git -> Projects from Git
+   Clone URI
+   Fill in the URI from Github
+     https://github.com/jjhursey/uwl-mse-mtt-test.git
+   Fill in your user/password then click Next
+
+2) Check the box next to master then Next
+
+3) Tell it which directory you wish to use then click next
+
+4) Next
+
+5) Make sure MTT-INI-Parser is checked then click finish.
+
+
+Eclipse Setup for a new project:
+--------------------------------
+0) Make sure your Eclipse is up to date
+
+1) Install the antlr4ide (See Installation section)
+   https://github.com/jknack/antlr4ide
+
+2) Download the ANTLR .jar file (Choose the Complete ANTLR 4.5 Java binaries jar)
+   http://www.antlr.org/download.html
+   - Put the antlr-4.5-complete.jar file in a well known location on your machine
+
+3) Setup a Java Project
+   File -> New -> Java Project
+
+-) Setup the connection to git
+   Right click on the project
+      Team -> Share Project -> Git
+   Point it to the repository on your system.
+   "Create..." Browse for the location of the parent git directory under which you
+   want the project to be created
+   "Finish"
+
+4) Copy the antlr-4.5-complete.jar file into your Java Project
+   I prefer to put it in a 'lib' directory
+
+5) Right click on the antlr-4.5-complete.jar file
+   Build Path -> Add to Build Path
+
+-) Make it your default .jar file
+   Preferences-> ANTLR 4 -> Tool
+   "Add" a new distribution -> find the antlr-4.5-complete.jar file you downloaded
+   a moment ago.
+   Make sure the checkbox beside the 4.5 version is checked
+   "Apply" then "Ok" to close the preferences
+
+6) Right click on the Java Project (Creating an ANTLR File)
+   File -> New -> File
+   Create a "Hello.g4" file (or whatever you want to call it)
+   Copy in a basic Grammar to start with (such as that in the Hello.g4)
+
+6) Create a new Java file
+   File -> New -> Class
+   Copy in the basic version from this directory.
+
+7) Add the ANTLR generated sources as a build src file
+   Right click on the antlr4 folder (under target->generated-sources)
+   Build Path -> Use as Source Folder
+
+10) Now you should be able to edit the .g4 file and have eclipse auto-generate
+    the lexer and parser. And you should be able to run the .java file to use
+    that
+
+
+9) Add the Javadoc for the ANTLR library
+   Right click on the antlr-4.5-complete.jar file under "Referenced Libraries"
+   Select "Properties"
+   Select "Javadoc Location"
+   Enter the following URL in the "Javadoc location path" field
+   http://www.antlr.org/api/Java/
+   "Apply" then "Ok" to exit the dialog
+
+10) Open the Syntax Diagram
+    Window -> Show View -> Other
+    ANTLR 4 -> Syntax Diagram
+
+11) Now you are ready to start writing Java and ANTLR code
+
+
+Example Setup:
+--------------
+ - In your ANTLR Project you will have a Hello.g4 file by default. This is your grammar.
+ - Replace it with the one in the examples/eclipse-setup directory.
+ - Drag and drop the Test.java file from the examples/eclipse-setup directory into your src folder of the Java project.
+ - Run that Java program and it should print something like:
+   (init (r hello world) ; (r hello jerry))
+ - Now you have a fully working tool chain, and it is time to get started.
+
+
+Project Setup:
+--------------
+ - Create a new
